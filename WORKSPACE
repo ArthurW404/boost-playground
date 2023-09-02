@@ -1,6 +1,12 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+http_archive(
+  name = "com_google_googletest",
+  urls = ["https://github.com/google/googletest/archive/f8d7d77c06936315286eb55f8de22cd23c188571.zip"],
+  strip_prefix = "googletest-f8d7d77c06936315286eb55f8de22cd23c188571",
+)
+
 # Boost
 # Famous C++ library that has given rise to many new additions to the C++ Standard Library
 # Makes @boost available for use: For example, add `@boost//:algorithm` to your deps.
